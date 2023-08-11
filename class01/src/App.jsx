@@ -4,7 +4,7 @@ import { useState } from 'react'
 import 'tailwindcss/tailwind.css';
 import Experience from './Experience';
 import VersionTwoExperience from './VersionTwoExperience';
-import ImgThree from './ImgThree';
+import ImgThree from './components/ImgThree';
 
 
 function App() {
