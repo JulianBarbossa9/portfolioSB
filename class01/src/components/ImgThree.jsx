@@ -1,4 +1,4 @@
-import { CameraControls, Edges, OrbitControls } from '@react-three/drei'
+import { CameraControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import Side from './Side'
@@ -8,7 +8,6 @@ const ImgThree = () => {
     <>
         <mesh castShadow receiveShadow>
           <boxGeometry args={[2,2,2]} />
-          <Edges />
           <Side rotation={[0,0,0]} bg='orange' index={0}> 
             <torusGeometry args={[0.65, 0.3, 64]} />
           </Side>
