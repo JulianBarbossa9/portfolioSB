@@ -11,7 +11,6 @@ const ContactBannerStyled = styled.div`
     
     .contactBanner__wraper{
       background-color: var(--deep-dark);
-      border: 2px solid red;
         border-radius:12px;
         padding: 4rem;
         text-align: center;
@@ -28,12 +27,14 @@ const ContactBannerStyled = styled.div`
         
 `;
 
+
+
 const ContactBanner = () => {
     return (  
         <Fragment>
             <ContactBannerStyled>
                 <div className='container'>
-                    {/* <div className='contactBanner__wraper'>
+                    <div className='contactBanner__wraper'>
                         <PresentText 
                             msj="Have a project in mind"
                         />
@@ -44,10 +45,8 @@ const ContactBanner = () => {
                             btnLink= "/contact"
                             btnText= "Contact Now"
                         />
-                    </div> */}
-                    <div className='contactBanner__wraper'>
-                      <CanvasSection />
                     </div>
+                    
                 </div>
             </ContactBannerStyled>
         </Fragment>
