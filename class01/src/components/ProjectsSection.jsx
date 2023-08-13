@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import SwiperCore from 'swiper';
+import { Navigation } from 'swiper/modules'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -80,6 +81,7 @@ const ProjectsSection = () => {
                     />
                     <div className="projects__allItems">
                         <Swiper
+                            modules={[Navigation]}
                             spaceBetween={30}
                             slidesPerView={3}
                             navigation
