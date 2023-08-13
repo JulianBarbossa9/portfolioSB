@@ -173,11 +173,11 @@ const HeaderSection = () => {
                             <span className="section__name"> Julian Barbosa </span>
                         </h1>
                         <div className="section__image">
-                            {/* <img src={JuliImage} alt="fotoJulianB"/> */}
+                            <img src={JuliImage} alt="fotoJulianB"/>
 
-                            <Canvas camera={[0, 0, 0]} shadows>
+                            {/* <Canvas camera={[0, 0, 0]} shadows>
                               <ImgThree />
-                            </Canvas>
+                            </Canvas> */}
                         </div>
                         <div className="section__info">
                             <PresentText 
