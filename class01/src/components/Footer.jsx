@@ -137,10 +137,6 @@ const Footer = () => {
                                         path:'https://www.instagram.com/barbossa9/'
                                     },
                                     {
-                                        title:"Twitter",
-                                        path:'https://twitter.com/JulianBarbossa9'
-                                    },
-                                    {
                                         title:"GitHub",
                                         path:'https://github.com/JulianBarbossa9'
                                     },
