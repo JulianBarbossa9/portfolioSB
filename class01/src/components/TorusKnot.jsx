@@ -11,7 +11,7 @@ const TorusKnot = (props) => {
   return (
     <>
       <mesh scale={Math.min(viewport.width, viewport.height) / 9} {...props} ref={ref}> 
-        <torusKnotGeometry args={[3.3, 0.6, 90, 80]} />
+        <torusKnotGeometry args={[3.3, 0.5, 80, 100]} />
         <meshStandardMaterial color='red' />
         {/* 1, 0.5, 128, 3 */}
       </mesh>
