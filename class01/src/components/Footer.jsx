@@ -91,7 +91,7 @@ const Footer = () => {
                                     },
                                     {
                                         title:"Projects",
-                                        path:"/proyects",
+                                        path:"/projects",
                                         type:"Link"
                                     },
                                     {
