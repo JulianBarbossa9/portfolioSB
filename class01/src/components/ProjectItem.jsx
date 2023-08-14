@@ -44,12 +44,16 @@ const ProjectItemStyle = styled.div`
         .projectItem__descrip{
             font-size: 0.5rem;
         }
+        .projectItem__info {
+            width: 500px;
+        }
+       
     }
 `;
 
 const ProjectItem = ({img, title, descrip, link}) => {
     return (  
-        <Fragment>
+        <>
             <ProjectItemStyle>
             <Link to="" className="projectItem__img">
                 <img src={img} alt="project img"/>
@@ -67,7 +71,7 @@ const ProjectItem = ({img, title, descrip, link}) => {
                 {link && <a className='projectButton' target="_blank" rel="noreferrer"  href={link}>Open Project</a>}
             </div>
             </ProjectItemStyle>
-        </Fragment>
+        </>
     );
 }
  
