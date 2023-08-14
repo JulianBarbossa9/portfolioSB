@@ -9,6 +9,7 @@ import ContactBanner from '../components/ContactBanner';
 import { Canvas } from '@react-three/fiber';
 import { Center, AccumulativeShadows, RandomizedLight, OrbitControls, Environment } from '@react-three/drei';
 import GelatineCube from '../components/GelatineCube';
+import FlagThree from '../components/FlagThree';
 
 
 const AboutSectionStyle = styled.div`
@@ -122,6 +123,10 @@ const About = () => {
                               <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 2} autoRotate autoRotateSpeed={0.05} makeDefault />
                               <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/dancing_hall_1k.hdr" background blur={1} />
                             </Canvas> */}
+                            <Canvas>
+                              <ambientLight />
+                              <FlagThree />
+                            </Canvas>
                         </div>
                     </div>
 
