@@ -6,7 +6,7 @@ import ButtonSectionHeader from '../components/ButtonSectionHeader';
 import styled from 'styled-components';
 import ContactBanner from '../components/ContactBanner';
 import { Canvas } from '@react-three/fiber';
-import { Center, AccumulativeShadows, RandomizedLight, OrbitControls, Environment } from '@react-three/drei';
+import { Center, AccumulativeShadows, RandomizedLight, OrbitControls, Environment, Text3D } from '@react-three/drei';
 import GelatineCube from '../components/GelatineCube';
 import FlagThree from '../components/FlagThree';
 
@@ -103,7 +103,7 @@ const About = () => {
 
                             <ButtonSectionHeader 
                                 // btnLink = "/about"
-                                btnText = "Dowload CV"
+                                btnText = "Download CV"
                                 download={true}
                                 
                             />
@@ -125,7 +125,23 @@ const About = () => {
                             </Canvas> */}
                             <Canvas>
                               <ambientLight />
-                              <FlagThree />
+                              {/* <FlagThree />  */}
+                              <Center rotation={[-0.5, -0.25, 0]}>
+                                <Text3D
+                                    curveSegments={32}
+                                    bevelEnabled
+                                    bevelSize={0.04}
+                                    bevelThickness={0.1}
+                                    height={0.5}
+                                    lineHeight={0.5}
+                                    letterSpacing={-0.06}
+                                    size={5}
+                                    font={'../public/Roboto_Bold.json'}
+                                >
+                                    {`9`}
+                                    <meshMatcapMaterial color={'#BCB4B4'}/>
+                                </Text3D>
+                              </Center>
                             </Canvas>
                         </div>
                     </div>
