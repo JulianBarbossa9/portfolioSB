@@ -25,19 +25,46 @@ const ButtonStyle = styled.div`
 `;
 
 
-const ButtonSectionHeader = ({btnLink, btnText, outline}) => {
+const ButtonSectionHeader = ({btnLink, btnText, outline, download}) => {
+    
+    const handleDownLoadCV = () => {
+        const pdfUrl = '../public/Julian Santiago Barbosa Alvarado CV23023 En.pdf'
+        const fileName = 'JulianBarbosaCV.pdf'
+
+        const link = document.createElement('a')
+        link.href = pdfUrl
+        link.download = fileName
+
+        link.click()
+    }
+    
     return (  
         <>
-            <ButtonStyle
-                outline={outline}
-            >
-                <Link 
-                    className="button" 
-                    to={btnLink}
-                > 
-                    {btnText}
-                </Link>
-            </ButtonStyle>
+            {download ? (
+                <ButtonStyle 
+                    outline={outline}
+                >
+                    <Link 
+                        className='button'
+                        onClick={handleDownLoadCV}
+                    >
+                        {btnText}
+                    </Link>
+                </ButtonStyle>
+            ) : (
+                <ButtonStyle
+                    outline={outline}
+                >
+                    <Link 
+                        className="button" 
+                        to={btnLink}
+                    >
+                        
+                        {btnText}
+                    </Link>
+                </ButtonStyle>
+            )}
+            
         </>
     );
 }
