@@ -1,19 +1,15 @@
 import React, {Fragment} from 'react';
 import { SwiperSlide, Swiper } from 'swiper/react';
-import SwiperCore from 'swiper';
 import { Navigation } from 'swiper/modules'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-// import 'swiper/swiper-bundle.min.css';
-// import 'swiper/swiper.min.css';
 
 import SectionTitle from './SectionTitle';
 import ProjectItem from './ProjectItem';
 import projects from '../assets/data/projects';
 import styled from 'styled-components';
 
-// SwiperCore.use([Navigation]);
 
 
 const ProjectSectionStyle = styled.div`
@@ -41,19 +37,18 @@ const ProjectSectionStyle = styled.div`
         left: auto;
         top:0;
         margin-top: 20px; 
-        /* transform: translateY(50%); */
         color:var(--gray-1);
         border-radius: 9px;
     }
     .swiper-button-next{
         right: 0;
-        /* border: 2px solid red;  */
     }
     .swiper-button-prev::after,
     .swiper-button-next::after{
         font-size: 1rem;
     }
     @media only screen and (max-width: 768px){
+        overflow-x: hidden;
         .projects__allItems{
             flex-direction: column;
             max-width: 400px;
@@ -61,7 +56,8 @@ const ProjectSectionStyle = styled.div`
             margin-top: 5rem;
             gap: 3rem;
             .projectItem__img{
-                width: 100%;
+                width: 500px;
+                height: 300px;
             }
         }
 
