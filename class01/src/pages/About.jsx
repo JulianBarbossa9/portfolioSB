@@ -125,8 +125,8 @@ const About = () => {
                             </Canvas> */}
                             <Canvas>
                               <ambientLight />
-                              {/* <FlagThree />  */}
-                              <Center rotation={[-0.5, -0.25, 0]}>
+                              <FlagThree /> 
+                              {/* <Center rotation={[-0.5, -0.25, 0]}>
                                 <Text3D
                                     curveSegments={32}
                                     bevelEnabled
@@ -141,7 +141,7 @@ const About = () => {
                                     {`9`}
                                     <meshMatcapMaterial color={'#BCB4B4'}/>
                                 </Text3D>
-                              </Center>
+                              </Center> */}
                             </Canvas>
                         </div>
                     </div>
