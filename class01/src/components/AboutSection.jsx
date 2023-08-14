@@ -15,6 +15,10 @@ const AboutSectinStyle = styled.div`
         justify-content: flex-start;
         text-align: left;
     }
+    .aboutSection__text {
+        background-color:#262626;
+        /* padding: 1rem; */
+    }
 
     .aboutSection__left,
     .aboutSection__right {
@@ -86,9 +90,11 @@ const AboutSection = () => {
                             subHeading="Let me introduce myself"
                             title="About me"
                         />
-                        <PresentText msj="Multimedia Engineer with 
-                            excellent teamwork skills, good communication, responsible and punctual with leadership skills and high sense of belonging, with a good knowledge in Object Oriented Programming and web development as well as knowledge in software development."
-                        />
+                        <div className='aboutSection__text'>
+                            <PresentText msj="Multimedia Engineer with 
+                                excellent teamwork skills, good communication, responsible and punctual with leadership skills and high sense of belonging, with a good knowledge in Object Oriented Programming and web development as well as knowledge in software development."
+                            />
+                        </div>
 
                         <div className="aboutSection__buttons">
                             <ButtonSectionHeader
