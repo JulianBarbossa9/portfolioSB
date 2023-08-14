@@ -80,6 +80,24 @@ const AboutSectionStyle = styled.div`
      }
 `;
 
+const ButtonDownload = styled.a`
+     margin-top: 1rem;
+     color: black;
+     font-size: 1rem;
+     background-color: var(--gray-1);
+     padding: 10px 30px;
+     border-radius: 10px;
+     display: inline-block;
+     border: 2px solid var(--gray-1);
+       
+        @media only screen and (max-width: 768px){
+            font-size: 1.8rem;
+            
+        }
+`;
+
+
+
 
 
 const About = () => {
@@ -101,12 +119,12 @@ const About = () => {
                                 />
                             </div>
 
-                            <ButtonSectionHeader 
+                            <ButtonDownload
                                 // btnLink = "/about"
-                                btnText = "Download CV"
-                                download={true}
+                                href='/public/Julian Santiago Barbosa Alvarado CV23023 En.pdf'
+                                download
                                 
-                            />
+                            >Download CV</ButtonDownload>
                         </div>
                         <div className='right'>
                             {/* <img src={AboutImage } alt="sb ima"/> */}
