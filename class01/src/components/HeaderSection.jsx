@@ -184,7 +184,7 @@ const HeaderSection = () => {
                                 msj="Hello everyone out there, I am a person quite curious in what has to do with technology especially with software development and programming."
                             />
                             <ButtonSectionHeader
-                                btnLink="/proyects"
+                                btnLink="/projects"
                                 btnText="See my Works"
                                 outline={false}
                             />
