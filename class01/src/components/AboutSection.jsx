@@ -24,6 +24,7 @@ const AboutSectinStyle = styled.div`
     .aboutSection__right{
         margin-left: 2rem;
         height: 600px;
+        /* border: 2px solid red; */
     }
     .section_title{
         text-align: left;
