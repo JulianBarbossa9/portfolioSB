@@ -47,8 +47,8 @@ const ServiceSection = () => {
                     <div className="services__allItems">
                         <ServiceComponent 
                             icon={<MdSignalCellularAlt /> }
-                            title="Data Science"
-                            description="I have done a few projects in this area in which mathematical calculations or a set of data is used to derive meaning."
+                            title="Engineer Software"
+                            description="Experience in software development, web projects, REST API, React, Node.js, solving technical challenges, teamwork."
                         />
                         <ServiceComponent 
                             icon={<MdCode />}
