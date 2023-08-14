@@ -5,8 +5,6 @@ import React, { useRef, useState } from 'react'
 
 const FlagThree = () => {
 
-  // background-image: linear-gradient(180deg, #ffb629 0, #ffa537 10%, #ff9243 20%,
-  // #ff7e4b 30%, #ff6951 40%, #f25353 50%, #d93f53 60%, #c22f54 70%, #ad2355 80%, #9b1b56 90%, #8c1859 100%)
   
   const ref = useRef()
   const [ hovered, setHovered ] = useState(false)
@@ -21,7 +19,7 @@ const FlagThree = () => {
       <mesh onPointerOver={() => setHovered(true)} onPointerOut={()=> setHovered(false)} scale={[2,4,1]}>
         <planeGeometry args={[2, 8, 32, 32]} />
         <MeshDistortMaterial  ref={ref} speed={5}>
-          <GradientTexture stops={[0,0.8,1]} colors={['#e63946', '#f1faee', '#a8dadc']} size={100}/>
+          <GradientTexture stops={[0,0.5,1]} colors={['#e63946', '#c75b5b', '#ffffff']} size={100}/>
         </MeshDistortMaterial>
       </mesh>
     </>
