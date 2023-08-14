@@ -3,7 +3,6 @@ import Footer from '../components/Footer';
 import PresentText from '../components/PresentText';
 import AboutInfoItem from '../components/AboutInfoItem';
 import ButtonSectionHeader from '../components/ButtonSectionHeader';
-import AboutImage from '../assets/images/img2.png';
 import styled from 'styled-components';
 import ContactBanner from '../components/ContactBanner';
 import { Canvas } from '@react-three/fiber';
@@ -103,9 +102,10 @@ const About = () => {
                             </div>
 
                             <ButtonSectionHeader 
-                                btnLink = "/about"
+                                // btnLink = "/about"
                                 btnText = "Dowload CV"
-
+                                download={true}
+                                
                             />
                         </div>
                         <div className='right'>
