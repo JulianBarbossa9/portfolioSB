@@ -28,9 +28,7 @@ const ButtonStyle = styled.div`
 const ButtonSectionHeader = ({btnLink, btnText, outline, download}) => {
     
     const handleDownLoadCV = () => {
-        const pdfUrl = '/public/Julian Santiago Barbosa Alvarado CV23023 En.pdf'
-        // const pdfUrl = process.env.REACT_APP_PDF_URL
-        // D:/Documentos/ProyectoSB19/ReactJS/threeReact/class01/public/Julian Santiago Barbosa Alvarado CV23023 En.pdf
+        const pdfUrl = 'JulianSantiagoBarbosaAlvaradoCV23023En.pdf'
         const fileName = 'JulianBarbosaCV.pdf'
 
         const link = document.createElement('a')
