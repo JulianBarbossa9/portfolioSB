@@ -11,16 +11,15 @@ import projects from '../assets/data/projects';
 import styled from 'styled-components';
 
 
-
 const ProjectSectionStyle = styled.div`
     padding: 10rem 0;
     .sectionTitleee{
         text-align: center;
     }
     .projects__allItems{
-        display: flex;
-        gap:1rem;
         margin-top: 1rem;
+        width: 100%;
+        overflow: hidden;
     }
     .swiper-container{
         padding-top:3rem;
@@ -50,17 +49,8 @@ const ProjectSectionStyle = styled.div`
     @media only screen and (max-width: 768px){
         overflow-x: hidden;
         .projects__allItems{
-            flex-direction: column;
-            max-width: 400px;
-            margin: 0 auto;
             margin-top: 5rem;
-            gap: 3rem;
-            .projectItem__img{
-                width: 500px;
-                height: 300px;
-            }
         }
-
     }
 `;
 
@@ -79,19 +69,16 @@ const ProjectsSection = () => {
                         <Swiper
                             modules={[Navigation]}
                             spaceBetween={30}
-                            slidesPerView={3}
+                            slidesPerView={1}
                             navigation
                             breakpoints={
                                 {
-                                    // cuando la ventana tenga un widht  >= 640px muestra 1 tarjetas
                                     640: {
                                         slidesPerView: 1,
                                     },
-                                    // cuando la ventana tenga un widht  >= 768px muestra 2 tarjetas
                                     768: {
                                         slidesPerView: 2,
                                     },
-                                    // cuando la ventana tenga un widht  >= 1200px muestra 3 tarjetas
                                     1200: {
                                         slidesPerView: 3,
                                     }
@@ -105,7 +92,6 @@ const ProjectsSection = () => {
                                 return(
                                     <SwiperSlide key={project.id}>
                                         <ProjectItem 
-                                            key={project.id}
                                             img={project.img}
                                             title={project.name}
                                             descrip={project.desc}
@@ -121,5 +107,5 @@ const ProjectsSection = () => {
         </Fragment>
     );
 }
- 
+
 export default ProjectsSection;

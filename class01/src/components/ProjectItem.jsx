@@ -11,8 +11,13 @@ const ProjectItemStyle = styled.div`
         border-radius: 12px;
         display: inline-block;
         border: 3px solid var(--gray-2);
+        background-color: #222;
+        position: relative;
         img{
+            width: 100%;
             height: 100%;
+            object-fit: cover;
+            display: block;
         }
     }
     .projectItem__info{
@@ -20,20 +25,22 @@ const ProjectItemStyle = styled.div`
         background-color: var(--deep-dark);
         padding: 0.5rem;
         border-radius:12px;
-        /* border: 2px solid red; */
-        /* width:600px; */
+        width: 100%;
+        box-sizing: border-box;
     }
     .projectItem__title{
         font-size: 1rem;
+        color: #fff;
     }
     .projectItem__descrip{
-        font-size: 0.5rem;
+        font-size: 0.9rem;
         font-family: 'RobotoMono Regular';
         margin-top: 0.5rem;
+        color: #fff;
     }
     .projectButton{
         display:inline-block;
-        font-size: 0.5rem;
+        font-size: 0.9rem;
         text-decoration: underline;
         color: royalblue;
     }
@@ -42,13 +49,14 @@ const ProjectItemStyle = styled.div`
             height: 305px;
         }
         .projectItem__descrip{
-            font-size: 0.5rem;
+            font-size: 0.8rem;
         }
         .projectItem__info {
-            width: 500px;
+            width: 100%;
         }
-       
+        
     }
+
 `;
 
 const ProjectItem = ({img, title, descrip, link}) => {

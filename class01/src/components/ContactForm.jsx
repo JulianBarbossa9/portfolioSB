@@ -49,7 +49,7 @@ const ContactForm = () => {
         <Fragment>
             <div>
                 <ContactFormStyled >
-                    <div className="form-group" netlify name='contact'>
+                    <div className="form-group">
                         <label htmlFor="name">Your Name</label>
                         <input 
                             type="text" 

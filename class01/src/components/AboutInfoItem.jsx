@@ -3,59 +3,59 @@ import styled from 'styled-components';
 
 
 const AboutItemStyle = styled.div`
-    display:flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    position: relative;
+    margin-bottom: 2.5rem;
+
     .title{
-        font-size:2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--white);
+        margin-bottom: 1rem;
+        padding-left: 0.75rem;
+        border-left: 3px solid var(--gray-1);
     }
     .items {
-        display:flex;
-        gap: 1.5rem;
-        position: absolute;
-        left: 12rem;
-        /* margin-left: 1.5rem; */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
     }
     .item{
         background-color: var(--deep-dark);
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 9px;
+        border: 1px solid transparent;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 0.85rem;
+        line-height: 1.3;
+        transition: 0.2s ease border-color, 0.2s ease transform;
+
+        &:hover{
+            border-color: var(--gray-1);
+            transform: translateY(-2px);
+        }
     }
 
-  
     @media only screen and (max-width: 768px){
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        .items{
-            position: initial;
-            gap: 1rem;
-            /* left: 2rem; */
-        }
+        margin-bottom: 2rem;
         .title{
-            font-size: 1.5rem;
+            font-size: 1rem;
+        }
+        .items{
+            gap: 0.6rem;
         }
     }
-
-    
-    
 `;
 
 const AboutInfoItem = ({title, items}) => {
-    
-    
-    return (  
+
+
+    return (
         <Fragment>
             <AboutItemStyle>
-                <h3 onClick="title">
-                    {title}
-                </h3>
+                <h3 className='title'>{title}</h3>
                 <div className='items'>
                     {items.map((item, index) => (
                         <div className='item' key={index}>
