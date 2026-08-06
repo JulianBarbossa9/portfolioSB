@@ -187,20 +187,32 @@ const About = () => {
                          
                          <div className='about__info__item'>
                              <h2 className='about__info__heading'>My Skill </h2>
-                             <AboutInfoItem 
-                                 title="BackEnd"
-                                 items={["NodeJS","SQL", "GraphQL", "Django", "Python", "Bash-Scripting", "PostgreSQL"]}
-                             />
-                                 
-                             <AboutInfoItem 
-                                 title="FrontEnd"
-                                 items={["TypeScript","JavaScript","React JS", "Redux","Next JS", "Three JS"]}
-                             />
-                             
-                             <AboutInfoItem 
-                                 title="Other"
-                                 items={["AWS","Azure", "Data Migration","Git","Machine Learning","POO","SCRUM"]}
-                             />
+                             <div style={{marginTop: '2rem'}}>
+                                 <AboutInfoItem
+                                     title="BackEnd"
+                                     items={["Python","NodeJS","TypeScript","PHP","NestJS","Express","FastAPI","Django","Django REST Framework","Laravel","SQL","GraphQL","REST APIs","Microservices","Bash-Scripting","PostgreSQL","MySQL","MongoDB"]}
+                                 />
+
+                                 <AboutInfoItem
+                                     title="FrontEnd"
+                                     items={["TypeScript","JavaScript","React JS", "Redux","Next JS", "Angular", "Three JS"]}
+                                 />
+
+                                 <AboutInfoItem
+                                     title="Cloud & DevOps"
+                                     items={["AWS","Lambda","DynamoDB","API Gateway","Step Functions","EventBridge","SQS/SNS","AppSync","Cognito","CDK (IaC)","S3","Amplify","Azure","Docker","CI/CD","GitHub Actions","Bitbucket Pipelines","CodePipeline","Linux","SonarQube"]}
+                                 />
+
+                                 <AboutInfoItem
+                                     title="Testing"
+                                     items={["Jest","Pytest","RTL","Cypress","Playwright"]}
+                                 />
+
+                                 <AboutInfoItem
+                                     title="Other"
+                                     items={["Data Migration","Git","Machine Learning","POO","Clean Architecture","Scrum","Kanban","Agile","AI-assisted development"]}
+                                 />
+                             </div>
                          </div>
                      </div>
                  </div>
