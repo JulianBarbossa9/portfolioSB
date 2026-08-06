@@ -9,7 +9,8 @@ import AboutInfoItem from '../components/AboutInfoItem';
 import styled from 'styled-components';
 import ContactBanner from '../components/ContactBanner';
 import { Canvas } from '@react-three/fiber';
-import FlagThree from '../components/FlagThree';
+import OrbitCore from '../components/OrbitCore';
+// import FlagThree from '../components/FlagThree';
 
 
 const AboutSectionStyle = styled.div`
@@ -26,8 +27,10 @@ const AboutSectionStyle = styled.div`
      }
      .right{
          flex: 2;
-         height: 600px;
-         width: 600px
+         width: 100%;
+         max-width: 600px;
+         aspect-ratio: 1 / 1;
+         min-width: 0;
      }
      .about__subheading{
          margin-bottom: 2rem;
@@ -121,9 +124,9 @@ const About = () => {
                             </div>
 
                              <ButtonDownload
-                                 href='/JulianSantiagoBarbosaAlvaradoCV23023En.pdf'
-                                 download
-                                 
+                                 href='/Julian_Barbosa_CV_EN.pdf'
+                                 download='Julian_Barbosa_CV_EN.pdf'
+
                              >Download CV</ButtonDownload>
                         </div>
                         <div className='right'>
@@ -141,9 +144,10 @@ const About = () => {
                               <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 2} autoRotate autoRotateSpeed={0.05} makeDefault />
                               <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/dancing_hall_1k.hdr" background blur={1} />
                             </Canvas> */}
-                            <Canvas>
-                              <ambientLight />
-                              <FlagThree /> 
+                            <Canvas camera={{ position: [0, 0, 6.5], fov: 50 }}>
+                              <ambientLight intensity={0.6} />
+                              <OrbitCore />
+                              {/* <FlagThree /> */}
                               {/* <Center rotation={[-0.5, -0.25, 0]}>
                                 <Text3D
                                     curveSegments={32}
