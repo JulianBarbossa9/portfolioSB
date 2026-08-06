@@ -17,7 +17,7 @@ const ProjectsStyle = styled.div`
         gap: 1.5rem;
         margin-top: 2rem;
         justify-content:center;
-        align-items: center;
+        align-items: start;
     }
     .sectionTitleee{
         text-align:center;
