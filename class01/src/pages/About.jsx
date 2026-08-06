@@ -1,13 +1,14 @@
-import React, { Fragment} from 'react';
+import { Fragment } from 'react';
+import { aboutData } from '../assets/data/about';
+import ExperienceItem from '../components/ExperienceItem';
+
+
 import Footer from '../components/Footer';
 import PresentText from '../components/PresentText';
 import AboutInfoItem from '../components/AboutInfoItem';
-import ButtonSectionHeader from '../components/ButtonSectionHeader';
 import styled from 'styled-components';
 import ContactBanner from '../components/ContactBanner';
 import { Canvas } from '@react-three/fiber';
-import { Center, AccumulativeShadows, RandomizedLight, OrbitControls, Environment, Text3D } from '@react-three/drei';
-import GelatineCube from '../components/GelatineCube';
 import FlagThree from '../components/FlagThree';
 
 
@@ -119,12 +120,11 @@ const About = () => {
                                 />
                             </div>
 
-                            <ButtonDownload
-                                // btnLink = "/about"
-                                href='/public/Julian Santiago Barbosa Alvarado CV23023 En.pdf'
-                                download
-                                
-                            >Download CV</ButtonDownload>
+                             <ButtonDownload
+                                 href='/JulianSantiagoBarbosaAlvaradoCV23023En.pdf'
+                                 download
+                                 
+                             >Download CV</ButtonDownload>
                         </div>
                         <div className='right'>
                             {/* <img src={AboutImage } alt="sb ima"/> */}
@@ -164,62 +164,51 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className='about__info_items'>
-                        <div className='about__info__item'>
-                            <h2 className='about__info__heading'>Education </h2>
-                            <AboutInfoItem 
-                                title="School"
-                                items={["Instituto Tecnico Industrial Centro Don Bosco"]}
-                            />
-
-                            <AboutInfoItem 
-                                title="College"
-                                items={["Universidad Militar Nueva Granada"]}
-                            />
-                        </div>
-
-                        <div className='about__info__item'>
-                            <h2 className='about__info__heading'>Experience</h2>
-                            <AboutInfoItem 
-                                title="Software Engineer "
-                                items={["Akorbi: Software Engineer, I have worked in the development of a scheduling platform, focusing mainly as a front-end developer using React."]}
-                            />
-                            <AboutInfoItem 
-                                title="Software Developer "
-                                items={["TicSocial: I created with the team solutions for healthcare companies and EPS in Colombia, focusing on the creation of a patient management platform with React JS for the front-end and Django for the back-end."]}
-                            />
-                            <AboutInfoItem 
-                                title="Internships "
-                                items={["Accenture: Aplication Development Sofware"]}
-                            />
-
-                           
-                        </div>
-                        
-                        <div className='about__info__item'>
-                            <h2 className='about__info__heading'>My Skill </h2>
-                            <AboutInfoItem 
-                                title="BackEnd"
-                                items={["NodeJS","SQL", "GraphQL", "Django", "Python", "Bash-Scripting", "PostgreSQL"]}
-                            />
-
-                            <AboutInfoItem 
-                                title="FrontEnd"
-                                items={["TypeScript","JavaScript","React JS", "Redux","Next JS", "Three JS"]}
-                            />
-                            
-                            <AboutInfoItem 
-                                title="Other"
-                                items={["AWS","Azure", "Data Migration","Git","Machine Learning","POO","SCRUM"]}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </AboutSectionStyle>
-            <ContactBanner />
-            <Footer />
-        </Fragment>
-    );
-}
+                     <div className='about__info_items'>
+                         <div className='about__info__item'>
+                             <h2 className='about__info__heading'>Education </h2>
+                             {aboutData.education.map((edu, index) => (
+                                 <AboutInfoItem 
+                                     key={index}
+                                     title={edu.degree}
+                                     items={[`${edu.institution} (${edu.period}) - ${edu.location}`]}
+                                 />
+                             ))}
+                         </div>
  
-export default About;
+                         <div className='about__info__item'>
+                             <h2 className='about__info__heading'>Experience</h2>
+                             <div style={{marginTop: '2rem'}}>
+                                 {aboutData.experience.map((exp, index) => (
+                                     <ExperienceItem key={index} exp={exp} />
+                                 ))}
+                             </div>
+                         </div>
+                         
+                         <div className='about__info__item'>
+                             <h2 className='about__info__heading'>My Skill </h2>
+                             <AboutInfoItem 
+                                 title="BackEnd"
+                                 items={["NodeJS","SQL", "GraphQL", "Django", "Python", "Bash-Scripting", "PostgreSQL"]}
+                             />
+                                 
+                             <AboutInfoItem 
+                                 title="FrontEnd"
+                                 items={["TypeScript","JavaScript","React JS", "Redux","Next JS", "Three JS"]}
+                             />
+                             
+                             <AboutInfoItem 
+                                 title="Other"
+                                 items={["AWS","Azure", "Data Migration","Git","Machine Learning","POO","SCRUM"]}
+                             />
+                         </div>
+                     </div>
+                 </div>
+                 </AboutSectionStyle>
+                 <ContactBanner />
+                 <Footer />
+             </Fragment>
+         );
+     }
+     
+     export default About;
