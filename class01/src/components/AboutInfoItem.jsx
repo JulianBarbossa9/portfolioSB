@@ -53,9 +53,7 @@ const AboutInfoItem = ({title, items}) => {
     return (  
         <Fragment>
             <AboutItemStyle>
-                <h3 onClick="title">
-                    {title}
-                </h3>
+                <h3>{title}</h3>
                 <div className='items'>
                     {items.map((item, index) => (
                         <div className='item' key={index}>
