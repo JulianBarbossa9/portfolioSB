@@ -28,8 +28,8 @@ const ButtonStyle = styled.div`
 const ButtonSectionHeader = ({btnLink, btnText, outline, download}) => {
     
     const handleDownLoadCV = () => {
-        const pdfUrl = 'JulianSantiagoBarbosaAlvaradoCV23023En.pdf'
-        const fileName = 'JulianBarbosaCV.pdf'
+        const pdfUrl = '/Julian_Barbosa_CV_EN.pdf'
+        const fileName = 'Julian_Barbosa_CV_EN.pdf'
 
         const link = document.createElement('a')
         link.href = pdfUrl
