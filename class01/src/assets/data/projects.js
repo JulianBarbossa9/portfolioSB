@@ -2,7 +2,7 @@
 import ProjectImg from '../images/projectImg.png';
 import LogoBogota from '../images/logov1.png';
 import ParkingPlus from '../images/parking.png';
-import QuoteParking from '../images/utracker.jpg';
+import QuoteParking from '../images/quoteParking.png';
 import CavinImg from '../images/cavinimg.jpg';
 
 const projects = [
@@ -20,7 +20,6 @@ const projects = [
     'Parking we are in charge of providing in an easy and simple way to the user a better way to promote and find a parking lot in the city of Bogota, seeking to extend throughout the national and international territory.. ',
     img: ParkingPlus,
     link: 'https://gestionjbdg.netlify.app'
-
     
   },
   {
@@ -39,7 +38,7 @@ const projects = [
       'A small galaxy made with Three.JS which can expand, change color and add or remove particles. ',
     img: CavinImg,
     link:''
-   
+    
   },
   {
     id: 5,
@@ -48,7 +47,7 @@ const projects = [
       'Lorem ipsum dolor sit amet consectetur adipiscing elit, convallis ultrices vehicula.',
     img: ProjectImg,
     link:''
-   
+    
   },
 ];
 
